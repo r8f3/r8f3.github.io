@@ -12,19 +12,19 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 # Certifications
 
-<!-- 1. Link your stylesheet and JavaScript files -->
+<!-- 1. Load the carousel styles and logic -->
 <link rel="stylesheet" href="{{ site.baseurl }}/carousel.css">
 <script src="{{ site.baseurl }}/carousel.js" defer></script>
 
-<!-- 2. The Carousel HTML Structure -->
+<!-- 2. Carousel HTML Structure -->
 <div class="carousel-container">
     <button class="arrow left-arrow" id="prevBtn">&#10094;</button>
     
     <div class="carousel-slide" id="carouselSlide">
-        <!-- Replace these placeholder URLs with your actual image file paths -->
-        <img src= https://github.com/r8f3/r8f3.github.io/blob/main/adv%20dip.png alt="Slide 1">
-        <img src="https://github.com/r8f3/r8f3.github.io/blob/main/cert%20iv.png" alt="Slide 2">
-        <img src="https://github.com/r8f3/r8f3.github.io/blob/main/cert%203.png" alt="Slide 3">
+        <!-- Change 'images/photo1.jpg' to match your actual folder and file names -->
+        <img src="{{ site.baseurl }}/images/photo1.jpg" alt="Description 1">
+        <img src="{{ site.baseurl }}/images/photo2.jpg" alt="Description 2">
+        <img src="{{ site.baseurl }}/images/photo3.jpg" alt="Description 3">
     </div>
 
     <button class="arrow right-arrow" id="nextBtn">&#10095;</button>
