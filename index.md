@@ -12,10 +12,6 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 # Certifications
 
-<!-- 1. Theme Toggle Button Element -->
-<div style="text-align: right; margin-bottom: 15px;">
-    <button id="themeToggleBtn" class="toggle-btn">🌙 Dark Mode</button>
-</div>
 
 <!-- 2. Load Carousel Core Assets -->
 <link rel="stylesheet" href="{{ site.baseurl }}/carousel.css">
