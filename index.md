@@ -54,28 +54,44 @@ There should be whitespace between paragraphs. We recommend including a README, 
     transition: all 0.2s ease;
 }
 
-/* --- MANUAL DARK MODE OVERRIDES --- */
-/* These only activate when the .dark-theme class is injected by JavaScript */
-body.dark-theme, 
-body.dark-theme #wrapper, 
-body.dark-theme div.wrapper, 
-body.dark-theme section, 
+/* --- THE FIX: DINKY-SPECIFIC MANUAL DARK MODE OVERRIDES --- */
+/* We chain 'body.dark-theme' directly to Dinky's layout IDs to force the changes site-wide */
+
+body.dark-theme,
+body.dark-theme #wrapper,
+body.dark-theme .wrapper,
+body.dark-theme section,
 body.dark-theme header {
     background-color: #121212 !important;
-    background-image: none !important;
+    background-image: none !important; /* Wipes out Dinky's bright background patterns */
     color: #e0e0e0 !important;
 }
 
-body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, 
-body.dark-theme h4, body.dark-theme h5, body.dark-theme h6, 
-body.dark-theme strong, body.dark-theme p, body.dark-theme li, 
-body.dark-theme code, body.dark-theme span, body.dark-theme small {
+/* Force all text variants inside Dinky's wrapper layout to change color */
+body.dark-theme h1, body.dark-theme #wrapper h1,
+body.dark-theme h2, body.dark-theme #wrapper h2,
+body.dark-theme h3, body.dark-theme #wrapper h3,
+body.dark-theme p,  body.dark-theme #wrapper p,
+body.dark-theme li, body.dark-theme #wrapper li,
+body.dark-theme strong, body.dark-theme small {
     color: #ffffff !important;
     text-shadow: none !important;
 }
 
+/* Fix sidebar/header specific elements Dinky relies on */
+body.dark-theme header p.view a, 
+body.dark-theme header ul li a {
+    background: #222222 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+/* Keep hyperlinks readable */
 body.dark-theme a, body.dark-theme a code, body.dark-theme header a {
     color: #64b5f6 !important;
+}
+body.dark-theme a:hover {
+    color: #90caf9 !important;
 }
 
 body.dark-theme hr {
