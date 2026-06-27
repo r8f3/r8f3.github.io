@@ -25,7 +25,7 @@ There should be whitespace between paragraphs. We recommend including a README, 
      <a href="/Adv dip.png" target="_blank" download>   
         <img src="{{site.baseurl}}/Adv dip.png" alt="Advanced Diploma">
      </a>  
-     <a href=" }/Cert IV.png" target="_blank" download> 
+     <a href="/Cert IV.png" target="_blank" download> 
         <img src="{{ site.baseurl }}/Cert IV.png" alt="Certificate IV">
      </a>
      <a href="/Cert 3.png" target="_blank" download>    
