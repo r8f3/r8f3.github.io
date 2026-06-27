@@ -6,11 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let counter = 0;
     const totalImages = carouselImages.length;
-    const rotationSpeed = 3000;
+    const rotationSpeed = 3000; // 3 seconds per slide
 
     function moveCarousel() {
-        if(carouselImages[0]) {
-            const size = carouselImages[0].clientWidth;
+        if (carouselImages.length > 0) {
+            // Gets the exact width of the image dynamically
+            const size = carouselImages[0].clientWidth; 
             carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
         }
     }
@@ -25,11 +26,21 @@ document.addEventListener("DOMContentLoaded", function () {
         moveCarousel();
     }
 
-    if(nextBtn && prevBtn) {
-        nextBtn.addEventListener('click', () => { clearInterval(autoRotate); nextSlide(); autoRotate = setInterval(nextSlide, rotationSpeed); });
-        prevBtn.addEventListener('click', () => { clearInterval(autoRotate); prevSlide(); autoRotate = setInterval(nextSlide, rotationSpeed); });
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => { 
+            clearInterval(autoRotate); 
+            nextSlide(); 
+            autoRotate = setInterval(nextSlide, rotationSpeed); 
+        });
+        prevBtn.addEventListener('click', () => { 
+            clearInterval(autoRotate); 
+            prevSlide(); 
+            autoRotate = setInterval(nextSlide, rotationSpeed); 
+        });
     }
 
     let autoRotate = setInterval(nextSlide, rotationSpeed);
+    
+    // Recalculate when user resizes browser window
     window.addEventListener('resize', moveCarousel);
 });
