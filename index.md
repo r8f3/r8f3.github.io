@@ -22,7 +22,7 @@ There should be whitespace between paragraphs. We recommend including a README, 
     
     <div class="carousel-slide" id="carouselSlide">
         <!-- Change 'images/photo1.jpg' to match your actual folder and file names -->
-        <img src="{{ site.baseurl }}/images/photo1.jpg" alt="Description 1">
+        <img src="{{https://github.com/r8f3/r8f3.github.io}}/blob/main/adv dip.png" alt="Description 1">
         <img src="{{ site.baseurl }}/images/photo2.jpg" alt="Description 2">
         <img src="{{ site.baseurl }}/images/photo3.jpg" alt="Description 3">
     </div>
