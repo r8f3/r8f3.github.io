@@ -11,102 +11,62 @@ There should be whitespace between paragraphs.
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 # Certifications
-
-
-<!-- 2. Load Carousel Core Assets -->
+<!-- 1. Load your core stylesheet and sliding script -->
 <link rel="stylesheet" href="{{ site.baseurl }}/carousel.css">
 <script src="{{ site.baseurl }}/carousel.js" defer></script>
 
-<!-- 3. Explicit Dark/Light Structural Rules -->
+<!-- 2. SAFE THEME TUNING (Only touches colors, completely protects images) -->
 <style>
-/* Base structural rules to stop Dinky theme from breaking the slider layout */
+@media (prefers-color-scheme: dark) {
+    /* Changes background colors safely without breaking dimensions */
+    html, body, #wrapper, div.wrapper, section, header {
+        background-color: #121212 !important;
+        background-image: none !important;
+        color: #e0e0e0 !important;
+    }
+
+    /* Sets textbook typography colors */
+    h1, h2, h3, h4, h5, h6, strong, p, li, code, span, small {
+        color: #ffffff !important;
+        text-shadow: none !important;
+    }
+
+    /* Makes hyperlinks pop against dark background */
+    a, a code, header a {
+        color: #64b5f6 !important;
+    }
+    a:hover {
+        color: #90caf9 !important;
+    }
+    hr {
+        background: #333333 !important;
+        border-color: #333333 !important;
+    }
+}
+
+/* 3. CAROUSEL STRUCTURAL ENFORCEMENT (Overwrites Dinky's layout rules) */
 .carousel-slide {
-    display: flex !important;
+    display: flex !important; /* Enforces horizontal tracking alignment */
     flex-direction: row !important;
 }
+
 .carousel-slide a {
     display: block !important;
     width: 100% !important;
     height: 100% !important;
     flex-shrink: 0 !important;
 }
+
 .carousel-slide img {
     display: block !important;
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important;
-}
-
-/* Button UI Styling */
-.toggle-btn {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.2s ease;
-}
-
-/* --- THE FIX: DINKY-SPECIFIC MANUAL DARK MODE OVERRIDES --- */
-/* We chain 'body.dark-theme' directly to Dinky's layout IDs to force the changes site-wide */
-
-body.dark-theme,
-body.dark-theme #wrapper,
-body.dark-theme .wrapper,
-body.dark-theme section,
-body.dark-theme header {
-    background-color: #121212 !important;
-    background-image: none !important; /* Wipes out Dinky's bright background patterns */
-    color: #e0e0e0 !important;
-}
-
-/* Force all text variants inside Dinky's wrapper layout to change color */
-body.dark-theme h1, body.dark-theme #wrapper h1,
-body.dark-theme h2, body.dark-theme #wrapper h2,
-body.dark-theme h3, body.dark-theme #wrapper h3,
-body.dark-theme p,  body.dark-theme #wrapper p,
-body.dark-theme li, body.dark-theme #wrapper li,
-body.dark-theme strong, body.dark-theme small {
-    color: #ffffff !important;
-    text-shadow: none !important;
-}
-
-/* Fix sidebar/header specific elements Dinky relies on */
-body.dark-theme header p.view a, 
-body.dark-theme header ul li a {
-    background: #222222 !important;
-    color: #ffffff !important;
-    border-color: #444444 !important;
-}
-
-/* Keep hyperlinks readable */
-body.dark-theme a, body.dark-theme a code, body.dark-theme header a {
-    color: #64b5f6 !important;
-}
-body.dark-theme a:hover {
-    color: #90caf9 !important;
-}
-
-body.dark-theme hr {
-    background: #333333 !important;
-    border-color: #333333 !important;
-}
-
-body.dark-theme .carousel-container {
-    background-color: #1e1e1e !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
-}
-
-body.dark-theme .toggle-btn {
-    background-color: #fff;
-    color: #333;
+    object-fit: contain !important; /* Safeguards certificates from squishing */
+    background: transparent !important;
 }
 </style>
 
-<!-- 4. Carousel HTML Structure -->
+<!-- 4. Correct Carousel HTML Frame -->
 <div class="carousel-container">
     <button class="arrow left-arrow" id="prevBtn">&#10094;</button>
     
@@ -124,32 +84,6 @@ body.dark-theme .toggle-btn {
 
     <button class="arrow right-arrow" id="nextBtn">&#10095;</button>
 </div>
-
-<!-- 5. Toggle Logic Script Component -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("themeToggleBtn");
-    
-    // Check if user previously saved a theme selection
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-theme");
-        toggleBtn.innerText = "☀️ Light Mode";
-    }
-
-    toggleBtn.addEventListener("click", function () {
-        document.body.classList.toggle("dark-theme");
-        
-        if (document.body.classList.contains("dark-theme")) {
-            localStorage.setItem("theme", "dark");
-            toggleBtn.innerText = "☀️ Light Mode";
-        } else {
-            localStorage.setItem("theme", "light");
-            toggleBtn.innerText = "🌙 Dark Mode";
-        }
-    });
-});
-</script>
 ## Header 2
 
 > This is a blockquote following a header.
