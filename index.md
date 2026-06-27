@@ -1,16 +1,4 @@
----
-layout: default
----
-
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
-[Link to another page](./another-page.html).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Certifications
+# **Certifications**
 <!-- 1. Load your core stylesheet and sliding script -->
 <link rel="stylesheet" href="{{ site.baseurl }}/carousel.css">
 <script src="{{ site.baseurl }}/carousel.js" defer></script>
@@ -187,7 +175,7 @@ end
 ```
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```
-
+[Link to another page](./another-page.html).
 ```
 The final element.
 ```
