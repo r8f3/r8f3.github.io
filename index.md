@@ -22,7 +22,7 @@ There should be whitespace between paragraphs. We recommend including a README, 
     
     <div class="carousel-slide" id="carouselSlide">
         <!-- Replace these placeholder URLs with your actual image file paths -->
-        <img src="https://github.com/r8f3/r8f3.github.io/blob/main/adv%20dip.png" alt="Slide 1">
+        <img src= https://github.com/r8f3/r8f3.github.io/blob/main/adv%20dip.png alt="Slide 1">
         <img src="https://github.com/r8f3/r8f3.github.io/blob/main/cert%20iv.png" alt="Slide 2">
         <img src="https://github.com/r8f3/r8f3.github.io/blob/main/cert%203.png" alt="Slide 3">
     </div>
