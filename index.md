@@ -72,14 +72,14 @@ There should be whitespace between paragraphs. We recommend including a README, 
     <button class="arrow left-arrow" id="prevBtn">&#10094;</button>
     
     <div class="carousel-slide" id="carouselSlide">
-        <a href="/adv dip.png" target="_blank" download>
-            <img src="{{ site.baseurl }}/adv dip.png" alt="Advanced Diploma">
+        <a href="/Adv dip.png" target="_blank" download>
+            <img src="{{ site.baseurl }}/Adv dip.png" alt="Advanced Diploma">
         </a>
-        <a href="/cert iv.png" target="_blank" download>
-            <img src="{{ site.baseurl }}/cert iv.png" alt="Certificate IV">
+        <a href="/Cert iv.png" target="_blank" download>
+            <img src="{{ site.baseurl }}/Cert iv.png" alt="Certificate IV">
         </a>
-        <a href="/cert 3.png" target="_blank" download>
-            <img src="{{ site.baseurl }}/cert 3.png" alt="Certificate III">
+        <a href="/Cert 3.png" target="_blank" download>
+            <img src="{{ site.baseurl }}/Cert 3.png" alt="Certificate III">
         </a>
     </div>
 
