@@ -86,3 +86,46 @@
         color: #8ab4f8 !important;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    /* 1. Invert the primary body, wrapper, and layout background */
+    body, 
+    #wrapper, 
+    div.wrapper,
+    section {
+        background-color: #121212 !important;
+        background-image: none !important; /* Removes Dinky's default subtle patterns */
+        color: #e0e0e0 !important;
+    }
+
+    /* 2. Style headings to remain bright against dark backgrounds */
+    h1, h2, h3, h4, h5, h6, strong {
+        color: #ffffff !important;
+        text-shadow: none !important; /* Cleans up light shadows */
+    }
+
+    /* 3. Style text paragraphs and list items */
+    p, li, code, span {
+        color: #cccccc !important;
+    }
+
+    /* 4. Fix hyperlink readability in dark environment */
+    a, a code {
+        color: #64b5f6 !important; /* Safe light blue variant */
+    }
+    
+    a:hover {
+        color: #90caf9 !important;
+    }
+
+    /* 5. Handle horizontal dividers and code borders */
+    hr {
+        background: #333333 !important;
+        border-color: #333333 !important;
+    }
+
+    /* 6. Fix header area text contrast */
+    header p, header h1, header a {
+        color: #ffffff !important;
+    }
+}
