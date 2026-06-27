@@ -1,6 +1,6 @@
 .carousel-container {
     position: relative;
-    max-width: 100%;
+    max-width: 100%; /* Adapts to your theme container width */
     width: 800px;
     height: 400px;
     overflow: hidden;
@@ -17,7 +17,7 @@
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Prevents image distortion */
     flex-shrink: 0;
 }
 .arrow {
@@ -36,3 +36,10 @@
 .left-arrow { left: 15px; }
 .right-arrow { right: 15px; }
 .arrow:hover { background-color: rgba(0, 0, 0, 0.7); }
+
+/* Quick fix for small mobile screens */
+@media (max-width: 600px) {
+    .carousel-container {
+        height: 250px;
+    }
+}
