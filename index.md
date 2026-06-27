@@ -12,49 +12,62 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 # Certifications
 
-<!-- 1. Load the carousel styles and logic -->
+<!-- 1. Load your core stylesheet and sliding script -->
 <link rel="stylesheet" href="{{ site.baseurl }}/carousel.css">
 <script src="{{ site.baseurl }}/carousel.js" defer></script>
 
-<!-- 2. FORCE DARK MODE OVERRIDES (Injected directly to beat Dinky) -->
+<!-- 2. SAFE THEME TUNING (Only touches colors, completely protects images) -->
 <style>
 @media (prefers-color-scheme: dark) {
-    /* Target every structural wrapper Dinky uses */
+    /* Changes background colors safely without breaking dimensions */
     html, body, #wrapper, div.wrapper, section, header {
         background-color: #121212 !important;
-        background-image: none !important; /* Erases Dinky's default bright gradients */
+        background-image: none !important;
         color: #e0e0e0 !important;
     }
 
-    /* Force all text blocks to change color */
+    /* Sets textbook typography colors */
     h1, h2, h3, h4, h5, h6, strong, p, li, code, span, small {
         color: #ffffff !important;
         text-shadow: none !important;
     }
 
-    /* Keep hyperlinks readable */
+    /* Makes hyperlinks pop against dark background */
     a, a code, header a {
         color: #64b5f6 !important;
     }
     a:hover {
         color: #90caf9 !important;
     }
-
-    /* Darken lines and borders */
     hr {
         background: #333333 !important;
         border-color: #333333 !important;
     }
-    
-    /* Ensure the carousel container matches the dark backdrop */
-    .carousel-container {
-        background-color: #1e1e1e !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
-    }
+}
+
+/* 3. CAROUSEL STRUCTURAL ENFORCEMENT (Overwrites Dinky's layout rules) */
+.carousel-slide {
+    display: flex !important; /* Enforces horizontal tracking alignment */
+    flex-direction: row !important;
+}
+
+.carousel-slide a {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex-shrink: 0 !important;
+}
+
+.carousel-slide img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* Safeguards certificates from squishing */
+    background: transparent !important;
 }
 </style>
 
-<!-- 3. Carousel HTML Structure -->
+<!-- 4. Correct Carousel HTML Frame -->
 <div class="carousel-container">
     <button class="arrow left-arrow" id="prevBtn">&#10094;</button>
     
