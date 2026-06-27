@@ -16,26 +16,62 @@ There should be whitespace between paragraphs. We recommend including a README, 
 <link rel="stylesheet" href="{{ site.baseurl }}/carousel.css">
 <script src="{{ site.baseurl }}/carousel.js" defer></script>
 
-<!-- 2. Carousel HTML Structure -->
+<!-- 2. FORCE DARK MODE OVERRIDES (Injected directly to beat Dinky) -->
+<style>
+@media (prefers-color-scheme: dark) {
+    /* Target every structural wrapper Dinky uses */
+    html, body, #wrapper, div.wrapper, section, header {
+        background-color: #121212 !important;
+        background-image: none !important; /* Erases Dinky's default bright gradients */
+        color: #e0e0e0 !important;
+    }
+
+    /* Force all text blocks to change color */
+    h1, h2, h3, h4, h5, h6, strong, p, li, code, span, small {
+        color: #ffffff !important;
+        text-shadow: none !important;
+    }
+
+    /* Keep hyperlinks readable */
+    a, a code, header a {
+        color: #64b5f6 !important;
+    }
+    a:hover {
+        color: #90caf9 !important;
+    }
+
+    /* Darken lines and borders */
+    hr {
+        background: #333333 !important;
+        border-color: #333333 !important;
+    }
+    
+    /* Ensure the carousel container matches the dark backdrop */
+    .carousel-container {
+        background-color: #1e1e1e !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
+    }
+}
+</style>
+
+<!-- 3. Carousel HTML Structure -->
 <div class="carousel-container">
     <button class="arrow left-arrow" id="prevBtn">&#10094;</button>
     
     <div class="carousel-slide" id="carouselSlide">
-        <!-- Change 'images/photo1.jpg' to match your actual folder and file names -->
-     <a href="/Adv dip.png" target="_blank" download>   
-        <img src="{{site.baseurl}}/Adv dip.png" alt="Advanced Diploma">
-     </a>  
-     <a href="/Cert IV.png" target="_blank" download> 
-        <img src="{{ site.baseurl }}/Cert IV.png" alt="Certificate IV">
-     </a>
-     <a href="/Cert 3.png" target="_blank" download>    
-        <img src="{{ site.baseurl }}/Cert 3.png" alt="Certificate III">
-     </a>
+        <a href="/adv dip.png" target="_blank" download>
+            <img src="{{ site.baseurl }}/adv dip.png" alt="Advanced Diploma">
+        </a>
+        <a href="/cert iv.png" target="_blank" download>
+            <img src="{{ site.baseurl }}/cert iv.png" alt="Certificate IV">
+        </a>
+        <a href="/cert 3.png" target="_blank" download>
+            <img src="{{ site.baseurl }}/cert 3.png" alt="Certificate III">
+        </a>
     </div>
 
     <button class="arrow right-arrow" id="nextBtn">&#10095;</button>
 </div>
-
 
 ## Header 2
 
