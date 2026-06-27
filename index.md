@@ -12,7 +12,24 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 # Certifications
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+<!-- 1. Link your stylesheet and JavaScript files -->
+<link rel="stylesheet" href="{{ site.baseurl }}/carousel.css">
+<script src="{{ site.baseurl }}/carousel.js" defer></script>
+
+<!-- 2. The Carousel HTML Structure -->
+<div class="carousel-container">
+    <button class="arrow left-arrow" id="prevBtn">&#10094;</button>
+    
+    <div class="carousel-slide" id="carouselSlide">
+        <!-- Replace these placeholder URLs with your actual image file paths -->
+        <img src="https://picsum.photos" alt="Slide 1">
+        <img src="https://picsum.photos" alt="Slide 2">
+        <img src="https://picsum.photos" alt="Slide 3">
+    </div>
+
+    <button class="arrow right-arrow" id="nextBtn">&#10095;</button>
+</div>
+
 
 ## Header 2
 
