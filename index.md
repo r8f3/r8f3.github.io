@@ -72,7 +72,7 @@
 
     <button class="arrow right-arrow" id="nextBtn">&#10095;</button>
 </div>
-## Header 2
+# About me 
 
 > This is a blockquote following a header.
 >
