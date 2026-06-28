@@ -73,6 +73,10 @@
     <button class="arrow right-arrow" id="nextBtn">&#10095;</button>
 </div>
 # About me 
+Hi my name is rafe docherty harris Im 23 and studied cyber security. recently i have started a youtube channel dedicated to trying to make cybersecurity acsessible and easier to understand 
+I'm sure we have all watched that video that was 40 minuets long and hard to stay engaged with. I am trying to change that providing short and engaging content. designed at keeping people intrested. 
+What lead to me studying cyber security? i have always been facisnated by tech and video games from a young age naturally i started to become fascinated with anti cheats and how games try to stop cheaters. 
+through my love of gaming your always curious how you are able to exploit the games i am definetly guilty of going the long way just because i want to try and exploit the game code.
 
 > This is a blockquote following a header.
 >
