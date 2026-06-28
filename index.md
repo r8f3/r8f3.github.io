@@ -78,26 +78,19 @@ I'm sure we have all watched that video that was 40 minuets long and hard to sta
 What lead to me studying cyber security? i have always been facisnated by tech and video games from a young age naturally i started to become fascinated with anti cheats and how games try to stop cheaters. 
 through my love of gaming your always curious how you are able to exploit the games i am definetly guilty of going the long way just because i want to try and exploit the game code.
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
 
-### Header 3
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+# Guides
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+
+
+
+
+
+
+# Links
+
+
 
 #### Header 4
 
