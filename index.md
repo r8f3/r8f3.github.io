@@ -81,8 +81,11 @@ through my love of gaming your always curious how you are able to exploit the ga
 
 
 # Guides
+#1 how to create your own git hub page.
+https://r8f3.github.io/cybersecurity-portfolio-tutorial-github.io/
 
-
+#2 Owasp Juice shop. medium difficulty hack the boss
+https://r8f3.github.io/hack-the-box-owasp-tutorial-medium-difficulty/
 
 
 
